@@ -4,8 +4,8 @@ let { className } = require("../tools.js");
 class Component extends React.Component {
     constructor(props) {
         super(props)
-        let { theme, heading, closeable, onClose } = props;
-        this.state = { theme, heading, closeable, show: true, onClose }
+        let { theme, heading, closeable, onClose, children } = props;
+        this.state = { theme, heading, closeable, show: true, onClose, children }
     }
     render() {
         let onClose = () => {
@@ -21,7 +21,7 @@ class Component extends React.Component {
                         ) : null
                 }
                 {
-                    this.props.children
+                    this.state.children
                 }
                 {
                     this.state.closeable ?
@@ -35,8 +35,8 @@ class Component extends React.Component {
         )
     }
     componentWillReceiveProps(nextProps) {
-        let { theme, heading, closeable, onClose } = nextProps;
-        this.setState({ theme, heading, closeable, onClose })
+        let { theme, heading, closeable, onClose, children } = nextProps;
+        this.setState({ theme, heading, closeable, onClose, children })
     }
 }
 

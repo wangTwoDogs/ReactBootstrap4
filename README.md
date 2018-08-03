@@ -9,3 +9,4 @@ bootstrap 4 本身不支持icon了，需要通过其他的icon库辅助，所以
 [Iconic](https://www.baidu.com/link?url=oVDbNLl1YTmVYPpvwrNjncgcrQtxPes5O0Hl0fQ5_RK&wd=&eqid=e99e0c9500012de8000000065b6276c3)
 
 - 2018-08-02 alert
+- 2018-08-03 badge
