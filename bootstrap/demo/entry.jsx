@@ -5,6 +5,7 @@ let ReactDOM = require("react-dom");
 let Alert = require("../src/components/alerts/index.jsx");
 let AlertLink = require("../src/components/alerts/link.jsx");
 let Badge = require("../src/components/badge/index.jsx");
+let Button = require("../src/components/button/index.jsx");
 
 class Root extends React.Component {
     constructor(props) {
@@ -19,21 +20,32 @@ class Root extends React.Component {
                         <h2>alerts</h2>
                         <Alert>
                             This is a primary alert—check it out!
-                </Alert>
+                        </Alert>
                         <Alert theme="success" closeable>
                             This is a primary alert—check it out!
-                </Alert>
+                        </Alert>
                         <Alert theme="info" closeable>
                             This is a primary alert with <AlertLink>an example link</AlertLink>. Give it a click if you like.
-                </Alert>
+                        </Alert>
                         <Alert heading="Well done!" closeable onClose={() => { alert(1) }}>
                             This is a primary alert with <AlertLink>an example link</AlertLink>. Give it a click if you like.
-                </Alert>
+                        </Alert>
                         <h2>badges</h2>
                         <Badge theme="primary">primary</Badge>
-                        <Badge theme="secondary" isPill>secondary</Badge>
+                        <Badge theme="secondary" pill>secondary</Badge>
                         <Badge theme="success">success</Badge>
                         <Badge theme="dark" href="###">dark</Badge>
+                        <h2>buttons</h2>
+                        <Button theme="primary">primary</Button>
+                        <Button theme="secondary">secondary</Button>
+                        <Button theme="success">success</Button>
+                        <Button theme="danger">danger</Button>
+                        <Button theme="warning">warning</Button>
+                        <Button theme="info">info</Button>
+                        <Button theme="light" outline>light</Button>
+                        <Button theme="dark">dark</Button>
+                        <Button theme="link">link</Button>
+                        <Button theme="primary" size="lg" active disabled>primary</Button>
                     </div>
                 </div>
             </div>
